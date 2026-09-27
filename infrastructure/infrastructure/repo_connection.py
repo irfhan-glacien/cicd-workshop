@@ -33,7 +33,7 @@ class RepoConnection:
     def source_action(
         self, output: codepipeline.Artifact
     ) -> codepipeline_actions.CodeStarConnectionsSourceAction:
-        owner = self.scope.node.try_get_context("irfhan-glacien")
+        owner = self.scope.node.try_get_context("organizationName")
         if not owner:
             raise ValueError(
                 "Set organizationName in the context block of cdk.json to your "
